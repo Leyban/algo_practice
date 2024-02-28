@@ -2,10 +2,18 @@ package main
 
 import (
 	"algo/bubblesort"
+	"algo/selectionsort"
 	"fmt"
 )
 
 func main() {
-	res := bubblesort.BubbleSort([]int{29, 10, 14, 37, 14})
+	arr := []int{44, 50, 46, 1, 24, 26, 9, 6, 29, 31}
+
+	fmt.Println("Bubble Sort")
+	res := bubblesort.BubbleSort(arr)
+	fmt.Println(res)
+
+	fmt.Println("Selection Sort")
+	res = selectionsort.SelectionSort(arr)
 	fmt.Println(res)
 }
