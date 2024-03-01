@@ -7,13 +7,11 @@ import (
 )
 
 func main() {
-	arr := []int{44, 50, 46, 1, 24, 26, 9, 6, 29, 31}
-
 	fmt.Println("Bubble Sort")
-	res := bubblesort.BubbleSort(arr)
-	fmt.Println(res)
+	arr := []int{5, 6, 8, 9, 7, 10, 3, 1, 2, 4}
+	fmt.Println(bubblesort.BubbleSort(arr))
 
 	fmt.Println("Selection Sort")
-	res = selectionsort.SelectionSort(arr)
-	fmt.Println(res)
+	arr = []int{5, 6, 8, 9, 7, 10, 3, 1, 2, 4}
+	fmt.Println(selectionsort.SelectionSort(arr))
 }

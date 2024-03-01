@@ -6,15 +6,13 @@ package selectionsort
 func SelectionSort(arr []int) []int {
 	for i := 0; i < len(arr)-1; i++ {
 		minimum := i
-		for j := i; j < len(arr)-1; j++ {
+		for j := i + 1; j < len(arr); j++ {
 			if arr[minimum] > arr[j] {
 				minimum = j
 			}
 		}
 		if arr[minimum] < arr[i] {
-			temp := arr[minimum]
-			arr[minimum] = arr[i]
-			arr[i] = temp
+			arr[i], arr[minimum] = arr[minimum], arr[i]
 		}
 	}
 
